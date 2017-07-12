@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: example
+spec:
+  selector:
+    app: example
+  type: NodePort
+  ports:
+    - port: 3000
+      nodePort: 31000
+#    - protocol: TCP
+#      port: 3000
+#      targetPort: http
+#      nodePort: 31000
