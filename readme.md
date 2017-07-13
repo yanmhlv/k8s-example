@@ -1,3 +1,7 @@
+requirements:
+- `brew install kubernetes-cli`
+- `brew cask install minikube`
+
 start minikube: `minikube start`
 
 use local docker daemon: `eval $(minikube docker-env --use-vendored-driver)`
