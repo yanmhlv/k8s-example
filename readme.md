@@ -91,3 +91,8 @@ deploy service: `kubectl create -f service.yml`
 
 ---
 in browser, go to `http://192.168.99.100:31000`
+
+
+
+deploy new image to deployment
+`kubectl set image deployment/example example=example:1.5`
