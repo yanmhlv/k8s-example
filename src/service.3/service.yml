@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: service-3
+spec:
+  selector:
+    app: service-3
+  type: NodePort
+  ports:
+    - port: 3000
+      nodePort: 31003
+#    - protocol: TCP
+#      port: 3000
+#      targetPort: http
+#      nodePort: 31000
