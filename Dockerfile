@@ -1,9 +1,12 @@
-FROM golang:1.8.3-alpine3.6 AS build-env
+FROM golang:1.8.3
 
-COPY . /go/src/app
-RUN go install app
+WORKDIR /app
+COPY . /app
 
-FROM alpine
-COPY --from=build-env /go /go
+ENV GOPATH=/app:/app/vendor
+RUN cd /app \
+    && go get service.1 \
+    && go get service.2 \
+    && go get service.3
+
 EXPOSE 3000
-CMD ["/go/bin/app"]
